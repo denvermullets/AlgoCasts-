@@ -20,7 +20,6 @@ function reverse(str) {
   // for (let character of str) {
   //   reversed = character + reversed
   // }
-
   // return reversed
 
   // solution 3 -
