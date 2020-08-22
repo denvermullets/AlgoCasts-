@@ -7,7 +7,6 @@
 //   reverse('Greetings!') === '!sgniteerG'
 
 function reverse(str) {
-
   // solution 1 -
     // use the spread operator instead of split because it will handle
     // non traditional characters - emoji's get represented as 2 characters
