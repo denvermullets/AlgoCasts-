@@ -16,6 +16,7 @@ function maxChar(str) {
   //   characters[char] = characters[char] || 1
   // }
 
+  // FOR OF when iterating thru arrays or strings
   for (let char of str) {
     if (characters[char]) {
       characters[char]++
@@ -24,6 +25,7 @@ function maxChar(str) {
     }
   }
   
+  // use FOR IN when iterating thru object
   for (let char in characters) {
     if (characters[char] > max) {
       max = characters[char]
