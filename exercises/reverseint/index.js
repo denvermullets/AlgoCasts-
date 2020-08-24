@@ -13,18 +13,9 @@ function reverseInt(n) {
   // toString()
   // Math.sign(x) 
 
-  // my 1st attempt
-    // probably can be done more efficiently
-  let numString = n.toString().split('').reverse().join('')
-  if (Math.sign(n) === 1) {
-    return parseInt(numString)
-  } else if (Math.sign(n) === -1) {
-    numString = '-' + numString
-    return parseInt(numString)
-  } else {
-    return parseInt(numString)
-  }
-
+  // reworked w/stephen's solution
+  const numString = n.toString().split('').reverse().join('')
+  return parseInt(numString) * Math.sign(n)
 }
 
 module.exports = reverseInt;
