@@ -9,29 +9,37 @@
 //   anagrams('Hi there', 'Bye there') --> False
 
 function anagrams(stringA, stringB) {
-  // my modified solution #2, incorporates given answer hints
-  const aCharMap = buildCharMap(stringA)
-  const bCharMap = buildCharMap(stringB)
-  let isAnagram = false
-
-  if (Object.keys(aCharMap).length === Object.keys(bCharMap).length){
-    for (let char in aCharMap) {
-      aCharMap[char] === bCharMap[char] ? isAnagram = true : isAnagram = false
-    }  
-  }
-
-  return isAnagram
+  return cleanString(stringA) === cleanString(stringB)
 }
 
-function buildCharMap(str) {
-  const charMap = {}
-
-  for (let char of str.replace(/[^\w]/g, "").toLowerCase()){
-    // add 1 to key/value pair or set it to 1 if it doesn't exist
-    charMap[char] = charMap[char] + 1 || 1
-  }
-  return charMap
+function cleanString(str) {
+  return str.replace(/[\^w]/g, '').toLowerCase().split('').sort().join('')
 }
+
+// function anagrams(stringA, stringB) {
+//   // my modified solution #2, incorporates given answer hints
+//   const aCharMap = buildCharMap(stringA)
+//   const bCharMap = buildCharMap(stringB)
+//   let isAnagram = false
+
+//   if (Object.keys(aCharMap).length === Object.keys(bCharMap).length){
+//     for (let char in aCharMap) {
+//       aCharMap[char] === bCharMap[char] ? isAnagram = true : isAnagram = false
+//     }  
+//   }
+
+//   return isAnagram
+// }
+
+// function buildCharMap(str) {
+//   const charMap = {}
+
+//   for (let char of str.replace(/[^\w]/g, "").toLowerCase()){
+//     // add 1 to key/value pair or set it to 1 if it doesn't exist
+//     charMap[char] = charMap[char] + 1 || 1
+//   }
+//   return charMap
+// }
 
     // my 1st solution, verbose af, no helper functions
 
