@@ -14,6 +14,15 @@
 //       ' ### '
 //       '#####'
 
-function pyramid(n) {}
+function pyramid(n) {
+
+  // n will be height of pyramid
+  // to find length of columns, take n * 2 - 1
+  for (let row = 0; row < n; row++) {
+    
+    // for (let column = 0; column)
+  }
+
+}
 
 module.exports = pyramid;
